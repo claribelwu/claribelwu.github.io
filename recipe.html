@@ -5,17 +5,17 @@
 <button onclick="generate()">Generate</button>
 <script>
 var grammarObj = {
-	"s": ["#Person#'s #CookingVessel# #Flavor# #Food#, #Guarantee#"],
-	"Person": ["Rachel Ray", "Martha Stewart", "Famous Dave"],
-	"CookingVessel": ["Crock Pot"],
-	"Flavor": ["Butterscotch"],
-	"Food": ["Ravioli"],
-	"Guarantee": ["sure to knock your socks off!"]
+	"s": ["#Person#'s #CookingVessel# #Flavor# #Food# #Guarantee#!"],
+	"Person": ["Rachel Ray", "Martha Stewart", "Famous Dave", "Guy Fieri", "Barefoot Contessa"],
+	"CookingVessel": ["Crock Pot", "Wok", "Easy-Bake Oven" "Dehydrator", "Sous-Vide", "Smoked"],
+	"Flavor": ["Butterscotch", "Gluten-Free", "Paleo", "Umami", "Spicy", "Sweet & Sour", "Candied"],
+	"Food": ["Ravioli", "Duck", "Steak", "Thin Mints", "Baby Bok Choi", "Onion Rings", "Pineapple"],
+	"Guarantee": ["is Sure to Knock Your Socks Off", "is Gonna Take You Straight to Flavortown", "Gonna be the Next Potluck Favorite", "Will Have You Going Back for Seconds"]
+
 }
 var grammar = tracery.createGrammar(grammarObj)
 function generate(){
 	var t = grammar.flatten("#S#");
 	$('h1').text(t);
 }
-
 </script>
