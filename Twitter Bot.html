@@ -1,0 +1,23 @@
+<script src="../lib/tracery.js"></script>
+<script src="../lib/mousetrap.min.js"></script>
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<h1>Text will go here</h1>
+<button onclick="generate()">Generate</button>
+<script>
+var grammarObj = {
+	"Origin": ["Today, you #sense# like #pleasant#. Nice.", "W0W! I wish I could #sensed# as #adjective1# as you do.", "Your #noun# #adverb#. I'm into it.", "Your #nouns# #adverbs#. I'm about it." "I can't believe how #adverb# your #noun# is. Go you.", "I really appreciate #phrase#.", "I'm grateful for your #adverbing# #noun1#", "Pls teach me how you #action#!", "How do you #action# so #adverbly?", "I'm #wow# at your #phrase3#", "Are you a #wizard#? Because, #face#.", "#face#. ur so #compliment# that #phrase4#." ],
+	"sense": ["smell", "feel", "taste", "sound", "look", "taste kinda", "are", "embody", "seem", "make me feel"],
+	"pleasant": ["a gentle afternoon by the sea", "the night sky", "the moon's essence", "a magical woodland creature", "Hermione's hair", "3 ply toilet paper", "a freshly cut bouqet of yellow roses", "soft baby cheeks", "witch hazel blossoms", "Dominoe's pizza", "stardust", "the first time in a museum", "christmas lights", "a handwritten card", "clean laundry that's still a little bit warm", "my childhood", "Febreeze", "chapstick", "a thousand crystal pineapples", "artisinal bread", "artisinal cheese", "craisins", "acai bowls", "human emotion", "requited love", "a laugh", "a smile", "a steamin' bowl of mama's chili", "eggs with soy sauce", "matcha latte", "sunset over a sea of clouds", "climbing a mountain", "an exulted salamander princess", "a Game of Thrones character who has survived against all odds", "Nicholas Cage", "Michael. Or Pichael. I can't tell the difference.", "foccacia bread", "a really good mid-afternoon nap", "a perfect fifth chord progression", "a fulfilling retail sale"],
+	"sensed": ["look", "smell", "sound", "sing", "run", "do jumping jacks", "walk", "live", "throw frisbees", "wear too-tight clothing", "eat big sandwiches", "multitask", "do math", "write epic trilogies", "run on little or no sleep", "cough in class", "ride a skateboard"],
+	"adjective1": ["gracefully", "delicately", "easefully", "astoundingly", "alternatively", "easily", "devastatingly beautifully"],
+	"noun": ["left pinkie", "forehead", , "third eye", "hair", "body", "mind", "soul", "essence", "true self", "humanity", "chin", "aura", "vibe"],
+	"adverb": ["makes my heart go pitter-patter.", "inspires the creative angsty artist within me", "inspires alternative poetry", "deserves snaps", "is underrated.", "looks like stardust and weighs like the universe.", "is a masterpiece of intentionality.", "is so cool!!!!!!", "is lovely~", "makes me feel some typa way.", ""]
+	"nouns": ["eyes","knuckles", "knee knobs", "eyebrows", "shoulders", "legs"]
+
+}
+var grammar = tracery.createGrammar(grammarObj)
+function generate(){
+	var t = grammar.flatten("#S#");
+	$('h1').text(t);
+}
+</script>
