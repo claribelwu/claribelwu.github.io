@@ -17,6 +17,7 @@ $.get("love4.txt", function(text) {
 });
 function generate(){
 	var t = markov.generate()
+	if (Math.random()<0.5){t="       "+t}
 	$('body').append("<p>"+t+"</p>")
 }
 </script>
