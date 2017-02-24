@@ -2,7 +2,7 @@
 <script src="../lib/markov.js"></script>
 <script>
 var txt;
-var markov = new MarkovGeneratorWord(3,20)
+var markov = new MarkovGeneratorWord(2,20)
 $.get("antlers.txt", function(text) {
      markov.feed(text)
 });
