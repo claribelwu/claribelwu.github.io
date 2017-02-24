@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+background-image: url("https://s-media-cache-ak0.pinimg.com/originals/70/f4/68/70f46846339fb3e8b83a0ffc1c61e00f.jpg");
+color:white;
+
+}
+<body>
+<script src="../lib/jquery-1.11.1.min.js"></script>
+<script src="../lib/markov.js"></script>
+<script>
+var txt;
+var markov = new MarkovGeneratorWord(2,20)
+$.get("antlers.txt", function(text) {
+     markov.feed(text)
+});
+$.get("tameimpala.txt", function(text) {
+     markov.feed(text)
+});
+$.get("glassanimals.txt", function(text) {
+     markov.feed(text)
+});
+function generate(){
+	var t = markov.generate()
+	if (Math.random()<0.50){t="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+t}
+	if (Math.random()<0.50){t="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+t}
+	if (Math.random()<0.50){t="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+t}
+	$('body').append("<p>"+t+"</p>")
+}
+</script>
+<button <a href="#" class="myButton">what?</a> onclick="generate()">Generate</button>
+</style>
+</head>
+<body>
+</body>
+</html>
