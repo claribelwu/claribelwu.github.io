@@ -18,8 +18,8 @@ $.get("love4.txt", function(text) {
 function generate(){
 	var t = markov.generate()
 	if (Math.random()<0.75){t="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+t}
-	if (Math.random()<0.75){t="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+t}
-	if (Math.random()<0.75){t="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+t}
+	if (Math.random()<0.75){t="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+t}
+	if (Math.random()<0.75){t="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+t}
 	$('body').append("<p>"+t+"</p>")
 }
 </script>
