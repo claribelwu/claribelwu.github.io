@@ -6,10 +6,16 @@ var markov = new MarkovGeneratorWord(2,20)
 $.get("antlers.txt", function(text) {
      markov.feed(text)
 });
+$.get("tameimpala.txt", function(text) {
+     markov.feed(text)
+});
+$.get("glassanimals.txt", function(text) {
+     markov.feed(text)
+});
 function generate(){
 	var t = markov.generate()
 	if (Math.random()<0.75){t="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+t}
-	if (Math.random()<0.75){t="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+t}
+	if (Math.random()<0.85){t="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+t}
 	if (Math.random()<0.75){t="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+t}
 	$('body').append("<p>"+t+"</p>")
 }
