@@ -16,7 +16,7 @@ div {
 </style>
 <script>
 var txt;
-var markov = new MarkovGeneratorWord(2,20)
+var markov = new MarkovGeneratorWord(2,25)
 $.get("antlers.txt", function(text) {
      markov.feed(text)
 });
