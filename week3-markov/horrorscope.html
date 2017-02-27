@@ -8,10 +8,15 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+div {
+	color:lavender;
+	text-align:center;
+	font-family:"Courier New";
+}
 </style>
 <script>
 var txt;
-var markov = new MarkovGenerator(4,200)
+var markov = new MarkovGenerator(10,300)
 $.get("horoscope.txt", function(text) {
      markov.feed(text);
 });
