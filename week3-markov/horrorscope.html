@@ -17,7 +17,7 @@ div {
 <script>
 var txt;
 var markov = new MarkovGenerator(10,300)
-$.get("horoscopes.txt", function(text) {
+$.get("horoscope.txt", function(text) {
      markov.feed(text);
 });
 function generate(){
