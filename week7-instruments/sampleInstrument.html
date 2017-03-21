@@ -2,7 +2,7 @@
 h1 {
 	text-align: center;
 	font-size: 2em;
-	font-family: Courier Black;
+	font-family: courier Black;
 }
 #textDiv{
 	margin-top: 5%;
@@ -43,16 +43,29 @@ Mousetrap.bind("y", function(){
 	playSound2("yay")
 })
 
-
-Mousetrap.bind("enter", function(){
-	setBgImage('cats.gif')
+Mousetrap.bind("h", function(){
+    setBgImage('thumbs.gif')
 })
 
-
-Mousetrap.bind("enter", function(){
-    setBgImage('sadDolphin.gif')
+Mousetrap.bind("j", function(){
+	setBgImage('garnet.gif')
 })
 
+Mousetrap.bind("k", function(){
+    setBgImage('giphy.gif')
+})
+
+Mousetrap.bind("l", function(){
+    setBgImage('smiledog.gif')
+})
+
+Mousetrap.bind(";", function(){
+    setBgImage('nice.gif')
+})
+
+Mousetrap.bind("enter", function(){
+    setBgImage('cats.gif')
+})
 
 Mousetrap.bind("backspace", function(){
 	$('h1').remove()
@@ -139,6 +152,8 @@ function setTextColor(color){
 <audio id="wow" src="wow.wav" preload="auto"></audio>
 <audio id="righttrack" src="righttrack.wav" preload="auto"></audio>
 <audio id="yay" src="yay.wav" preload="auto"></audio>
+<audio id="nicework" src="nicework.wav" preload="auto"></audio>
+<audio id="ugotit1" src="ugotit1.wav" preload="auto"></audio>
 
 <div id="textDiv">
 <h1>Need some encouragement? Poke around the keyboard!!!<br> Backspace to Clear</h1>
