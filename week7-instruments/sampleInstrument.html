@@ -2,7 +2,7 @@
 h1 {
 	text-align: center;
 	font-size: 2em;
-	font-family: courier Black;
+	font-family: arial Black;
 }
 #textDiv{
 	margin-top: 5%;
@@ -18,36 +18,36 @@ html {
 <script src="../lib/jquery-1.11.1.min.js"></script>
 <script src="../lib/mousetrap.min.js"></script>
 <script>
-Mousetrap.bind("q", function(){
+Mousetrap.bind("a", function(){
 	showText("DON'T GIVE UP")
 	playSound("ucandoit")
 })
-Mousetrap.bind("w", function(){
+Mousetrap.bind("s", function(){
 	showText("I really really really believe in you")
 	playSound("ugotit")
 })
-Mousetrap.bind("e", function(){
+Mousetrap.bind("d", function(){
 	typeText("you can do it", 10)
 	playSound("comeon")
 })
-Mousetrap.bind("r", function(){
+Mousetrap.bind("f", function(){
 	showText2("I am so proud of you!!!")
 	playSound2("wow")
 })
-Mousetrap.bind("t", function(){
+Mousetrap.bind("h", function(){
 	showText2("don't worry friend")
 	playSound2("righttrack")
 })
-Mousetrap.bind("y", function(){
+Mousetrap.bind("j", function(){
 	showText2("it's gonna be okay!")
 	playSound2("yay")
 })
 
-Mousetrap.bind("h", function(){
+Mousetrap.bind("space", function(){
     setBgImage('thumbs.gif')
 })
 
-Mousetrap.bind("j", function(){
+Mousetrap.bind("shift", function(){
 	setBgImage('garnet.gif')
 })
 
@@ -71,7 +71,7 @@ Mousetrap.bind("backspace", function(){
 	$('h1').remove()
 })
 //bind same function to multiple keys
-Mousetrap.bind(['a','s','d','f'], function(){
+Mousetrap.bind(['q','w','e','r','t','y'], function(){
 	//play random sound
 	var randSound = $('audio')[Math.floor(Math.random()*$('audio').length)]
 	playSound(randSound.id)
